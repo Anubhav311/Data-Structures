@@ -1,10 +1,10 @@
 import unittest
 import random
-from binary_search_tree import BinarySearchTree
+from binary_search_tree import BinarySearchTreeNode
 
 class BinarySearchTreeTests(unittest.TestCase):
   def setUp(self):
-    self.bst = BinarySearchTree(5)
+    self.bst = BinarySearchTreeNode(5)
 
   def test_insert(self):
     self.bst.insert(2)
