@@ -20,8 +20,9 @@ class TextBuffer:
         return s
 
     def append(self, string_to_add):
-        pass
-    
+        for char in string_to_add:
+            self.contents.add_to_tail(char)
+
     def prepend(self, string_to_add):
         # reverse the incoming string to maintain correct 
         # order when adding to the front of the text buffer 
