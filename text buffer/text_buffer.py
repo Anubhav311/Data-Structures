@@ -64,7 +64,8 @@ class TextBuffer:
     # initialize a new text buffer with this string and then 
     # call the join method 
     def join_string(self, string_to_join):
-        pass
+        new_buffer = TextBuffer(string_to_join)
+        self.join(new_buffer)
 
 if __name__ == '__main__':
     text = TextBuffer("Super")
