@@ -34,7 +34,8 @@ class TextBuffer:
             self.contents.remove_from_head()
 
     def delete_back(self, chars_to_remove):
-        pass
+        for i in range(chars_to_remove):
+            self.contents.remove_from_tail()
 
     """
     Join other_buffer to self
