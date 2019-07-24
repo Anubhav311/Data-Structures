@@ -30,7 +30,8 @@ class TextBuffer:
             self.contents.add_to_head(char)
 
     def delete_front(self, chars_to_remove):
-        pass
+        for i in range(chars_to_remove):
+            self.contents.remove_from_head()
 
     def delete_back(self, chars_to_remove):
         pass
