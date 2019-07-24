@@ -31,7 +31,11 @@ class BinarySearchTreeNode:
         return False
 
   def get_max(self):
-    pass
+    temp = self
+    
+    while temp.right is not None:
+      temp = temp.right
+    return temp.value
 
   def for_each(self, cb):
     pass
