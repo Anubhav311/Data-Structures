@@ -8,7 +8,7 @@ class TextBuffer:
         # check if an init string is provided
         # if so, put the contents of the init string in self.contents
         if init:
-            pass
+            self.append(init)
 
     def __str__(self):
         # needs to return a string to print 
