@@ -32,4 +32,18 @@ class Heap:
         break
 
   def _sift_down(self, index):
-    pass
+    largerChildrenIndex = (index * 2) + 1
+
+    if ((index * 2) + 2) < len(self.storage):
+      if self.storage[largerChildrenIndex] < self.storage[(index * 2) + 2]:
+        largerChildrenIndex = (index * 2) + 2
+      
+      if self.storage[index] < self.storage[largerChildrenIndex]:
+        self.storage[largerChildrenIndex], self.storage[index] = self.storage[index], self.storage[largerChildrenIndex]
+        self._sift_down(largerChildrenIndex)
+        
+    elif ((index * 2) + 1) < len(self.storage):
+      if self.storage[index] < self.storage[largerChildrenIndex]:
+        self.storage[largerChildrenIndex], self.storage[index] = self.storage[index], self.storage[largerChildrenIndex]
+        self._sift_down(largerChildrenIndex)
+
